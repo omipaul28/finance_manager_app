@@ -1,0 +1,166 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="16dp"
+        android:background="@color/colorBackground"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YumBox"
+            style="@style/CustomTextStyle"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="8dp"
+            android:textSize="64sp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/todayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: 01 Jan 2024"
+            android:layout_gravity="right"
+            android:textSize="22sp"
+            android:padding="8dp"
+            android:fontFamily="@font/stylish"
+            android:textStyle="bold"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginBottom="16dp" />
+
+
+
+        <!-- Display Today's Stats with custom text styles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- First TextView for Earn -->
+            <TextView
+                android:id="@+id/total_earn"
+                style="@style/CustomTextStyle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Earn\nBDT 0"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" /> <!-- Space between the TextViews -->
+
+            <!-- Second TextView for Cost -->
+            <TextView
+                android:id="@+id/total_cost"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Cost\nBDT 0"
+                android:gravity="center"
+                android:textSize="22sp"
+                style="@style/CustomTextStyle"
+                android:textColor="@color/colorTextPrimary"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="@drawable/rounded_background" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/total_profit"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Profit: BDT 0"
+            android:gravity="center"
+            android:textSize="32sp"
+            style="@style/CustomTextStyle"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:background="@drawable/rounded_background"
+            android:layout_marginBottom="15dp" />
+
+
+        <!-- Progress Text -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:progress="0"
+            android:max="100"
+            android:indeterminate="false"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Target Progress"
+            android:background="@drawable/dark_border"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:layout_marginBottom="48dp" />
+
+        <!-- Buttons for Navigation with custom designs -->
+        <Button
+            android:id="@+id/btnEntryToday"
+            style="@style/CustomButton"
+            android:layout_gravity="left"
+            android:text="Entry Today's Cost and Earn" />
+
+
+        <Button
+            android:id="@+id/btnMonthlyData"
+            style="@style/CustomButton"
+            android:layout_gravity="right"
+            android:text="See Monthly Data" />
+
+        <Button
+            android:id="@+id/btnYearlyData"
+            style="@style/CustomButton"
+            android:layout_gravity="left"
+            android:text="See Yearly Data" />
+
+        <Button
+            android:id="@+id/btnSetProfitGoal"
+            style="@style/CustomButton"
+            android:layout_gravity="right"
+            android:text="Set Today's Profit Goal" />
+
+        <!-- About Developer -->
+        <TextView
+            android:id="@+id/aboutDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Developer"
+            android:layout_gravity="end"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="16dp"
+            android:clickable="true"
+            android:textStyle="italic"
+            android:layout_marginTop="30dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>

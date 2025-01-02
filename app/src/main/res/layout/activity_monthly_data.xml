@@ -1,0 +1,107 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back Button -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backicon"
+                android:background="@android:color/transparent"
+                android:contentDescription="backbutton"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp" />
+        </RelativeLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This Month's Data"
+            style="@style/CustomTextStyle"
+            android:background="@drawable/rounded_background"
+            android:textSize="36sp"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginBottom="13dp" />
+
+        <!-- Summary Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:weightSum="2">
+            <!-- Total Earn -->
+            <TextView
+                android:id="@+id/totalEarn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="10000 BDT"
+                android:textSize="32sp"
+                style="@style/CustomTextStyle"
+                android:background="@drawable/rounded_background"
+                android:padding="8dp"
+                android:gravity="center" />
+            <!-- Total Cost -->
+            <TextView
+                android:id="@+id/totalCost"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="10000 BDT"
+                android:textSize="32sp"
+                style="@style/CustomTextStyle"
+                android:background="@drawable/rounded_background"
+                android:padding="8dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Total Profit -->
+        <TextView
+            android:id="@+id/totalProfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Profit"
+            android:textSize="27sp"
+            style="@style/CustomTextStyle"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/dark_border"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Profit Chart -->
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/profitChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/graph_border"
+            android:layout_marginBottom="16dp"
+            android:padding="8dp" />
+
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

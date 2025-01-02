@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:padding="16dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backicon"
+            android:background="@android:color/transparent"
+            android:contentDescription="backbutton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Profit Target"
+        style="@style/CustomTextStyle"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:textSize="32sp"
+        android:layout_marginBottom="24dp" />
+
+    <EditText
+        android:id="@+id/goalEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Daily Profit Goal"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/dark_border" />
+
+    <Button
+        android:id="@+id/btnSaveGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomButton"
+        android:layout_gravity="center"
+        android:text="Save Goal" />
+
+</LinearLayout>
